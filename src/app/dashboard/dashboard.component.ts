@@ -7,7 +7,7 @@ interface Metric {
 }
 interface Node {
   name: string;
-  cpu: Metric;с
+  cpu: Metric;
   mem: Metric;
 }
 
