@@ -1,13 +1,13 @@
 import { Component, OnInit, OnDestroy } from "@angular/core";
 
-// dexlares the interfaces for a Metric and Mude data type
+// declares the interfaces for a Metric and Mude data type
 interface Metric {
   used: number;
   available: number;
 }
 interface Node {
   name: string;
-  cpu: Metric;
+  cpu: Metric;с
   mem: Metric;
 }
 
