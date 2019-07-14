@@ -8,8 +8,8 @@ import { Component, Input } from "@angular/core";
 })
 export class MetricComponent {
   // Declares properties with  Input decoeater and default values
-  @Input() title: string = "";
-  @Input() description: string = "";
+  @Input() title: string;
+  @Input() description: string;
   // private properties for storing the validated values
   private _value: number = 0;
   private _max: number = 100;
