@@ -3,13 +3,15 @@
     <!-- uses NgClass to conditionally set the navbar color -->
     <nav class="navbar navbar-dark bg-primary mb-1" [ngClass]="{'bg-danger':isDanger(),'bg-success':!isDanger()}">
       <!-- binds the title to the page -->
-      <h1 class="navbar-brand mb-0">{{title}}</h1>
+      <h1 class="navbar-brand mb-0">
+        <ng-content select="metric-title"></ng-content>
+      </h1>
     </nav>
     <!-- displays the value and max properties and calculates the percentage with pipe -->
     <h4 class="card-title">{{value}}/{{max}} ({{value / max | percent:'1.0-2'}})</h4>
     <!-- binds the description -->
     <p class="card-text">
-      {{description}}
+      <ng-content select="metric-description"></ng-content>
     </p>
     <!-- uses Ng-bootstap Progress Bar and binds values into the component -->
     <ngb-progressbar [value]="value" [max]="max" [type]="isDanger() ? 'danger' : 'success'"></ngb-progressbar>
