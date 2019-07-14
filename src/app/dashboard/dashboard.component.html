@@ -6,12 +6,14 @@
     </nav>
     <div class="row">
       <!-- Metric component for CPU -->
-      <app-metric class="col-sm-6" [used]="cpu.used" [available]="cpu.available" [title]="'CPU'"
-        [description]="'utilization of CPU'">
+      <app-metric class="col-sm-6" [used]="cpu.used" [available]="cpu.available">
+        <metric-title>CPU</metric-title>
+        <metric-description>utilization of CPU cores</metric-description>
       </app-metric>
       <!-- Metric component for Memory -->
-      <app-metric class="col-sm-6" [used]="mem.used" [available]="mem.available" [title]="'Memory'"
-        [description]="'utilization of memory in GB'">
+      <app-metric class="col-sm-6" [used]="mem.used" [available]="mem.available">
+        <metric-title>Memory</metric-title>
+        <metric-description>utilization of memory in GB</metric-description>
       </app-metric>
     </div>
   </div>
