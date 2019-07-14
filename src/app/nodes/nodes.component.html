@@ -1,3 +1,11 @@
-<p>
-  nodes works!
-</p>
+<thead>
+  <tr>
+    <th>Node</th>
+    <!-- use of binding to a non-standart property name -->
+    <th [colSpan]="2">CPU</th>
+    <th [colSpan]="2">Memory</th>
+    <th>Detals</th>
+  </tr>
+</thead>
+<!-- use of Ng-content element to mark insertion point -->
+<ng-content></ng-content>
